@@ -1,0 +1,11 @@
+function strArray(arr) {
+    let newArr = []
+    for (let i = 0 ; i < arr[0].split('-').length ; i++) {
+        let subArr = []
+        for (let j = 0 ; j < arr.length ; j++) {
+            subArr.push(arr[j].split('-')[i])
+        }
+        newArr.push(Array.from(new Set(subArr)))
+    }
+    return newArr
+}
